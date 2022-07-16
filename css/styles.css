@@ -392,6 +392,9 @@ color: var(--main-color);
 .team-container{
  padding:30px 32px;
 }
+.team-title{
+  font-weight: 500;
+}
 .team {
   line-height: 1.18;
 
@@ -486,6 +489,9 @@ color: var(--main-color);
 /* Footer */
 .page-footer {
   background: var(--secondary-color);
+
+  padding-top:60px;
+  padding-bottom:60px;
 }
 .address,
 .footer-contact {
@@ -513,11 +519,10 @@ color: var(--main-color);
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .container-address {
   margin-right: 70px;
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 .join {
   display: inline-block;
@@ -527,9 +532,6 @@ color: var(--main-color);
 
   margin-bottom: 20px;
   color: var(--main-color);
-}
-.join-item {
-  display: flex;
 }
 .join-list {
   display: flex;
@@ -556,10 +558,6 @@ color: var(--main-color);
   background-color: var(--accent-color);
 }
 
-.container-join {
-  padding-top: 72px;
-  padding-bottom: 100px;
-}
 /* PORTFOLIO.HTML */
 .btn {
   border-radius: 4px;
