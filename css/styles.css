@@ -15,7 +15,7 @@ body {
 
   font-family: var(--font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -311,7 +311,6 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
 .benefits-text {
   color: var(--secondary-text-color);
 
-  font-weight: 400;
   line-height: 1.71;
   min-width: 270px;
 }
@@ -419,7 +418,6 @@ color: var(--main-color);
 
 .team-text {
   color: var(--secondary-text-color);
-  font-weight: 400;
 }
 .team-text {
   margin-bottom: 16px;
