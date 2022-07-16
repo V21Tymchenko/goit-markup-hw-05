@@ -389,6 +389,9 @@ color: var(--main-color);
 .our-team {
   background: var(--button-color);
 }
+.team-container{
+ padding:30px 32px;
+}
 .team {
   line-height: 1.18;
 
@@ -415,18 +418,14 @@ color: var(--main-color);
   color: var(--secondary-text-color);
   font-weight: 400;
 }
-.team-photo {
-  margin-bottom: 30px;
-}
 .team-text {
   margin-bottom: 16px;
 }
 /* Ссылки на соц сети */
 .icon {
   display: flex;
-  padding: 0 32px;
   justify-content: space-between;
-  margin-bottom: 30px;
+
 }
 .icon-link {
   width: 44px;
