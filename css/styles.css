@@ -175,11 +175,11 @@ ul {
 /* Hero */
 .hero {
   background-color: var(--secondary-color);
-}
-.container-hero {
+  
   padding-top: 200px;
   padding-bottom: 200px;
 }
+
 .hero {
   max-width: 1600px;
   background-image: linear-gradient(
