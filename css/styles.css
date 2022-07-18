@@ -38,35 +38,6 @@ ul {
   margin: 0px;
   padding: 0px;
 }
-
-/* oбщие эффекты для активного состояние ссылок и кнопок*/
-.link:hover,
-.link:focus,
-.address:hover,
-.address:focus,
-.footer-contact:hover,
-.footer-contact:focus {
-  color: var(--accent-color);
-}
-.link,
-.address,
-.footer-contact {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn:hover,
-.btn:focus,
-.order:hover,
-.order:focus {
-  color: var(--main-color);
-  background-color: var(--accent-color);
-  border-style: none;
-  border-radius: 4px;
-}
-.btn,
-.oreder {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 /* Header */
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -101,11 +72,22 @@ ul {
 
   margin-right: 93px;
 }
+.link:hover,
+.link:focus,
+.address:hover,
+.address:focus,
+.footer-contact:hover,
+.footer-contact:focus {
+  color: var(--accent-color);
+}
+
 .link {
   color: var(--main-text-color);
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-web,
 .current {
@@ -155,6 +137,13 @@ ul {
 
   align-items: center;
 }
+.contact .phone,
+.contact .envelope {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-item .contact {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .contact:hover,
 .contact:focus {
   color: var(--accent-color);
@@ -164,10 +153,6 @@ ul {
 .contact:hover .phone,
 .contact:focus .phone {
   fill: var(--accent-color);
-}
-.contact .envelope,
-.contact .phone {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-item:not(:last-child) {
@@ -208,8 +193,8 @@ ul {
   text-align: center;
 }
 .order {
-  color: var(--main-text-color);
-  background-color: var(--button-color);
+  color: var(--button-color);
+  background-color: var(--accent-color);
 
   cursor: pointer;
   font-weight: 700;
@@ -328,6 +313,9 @@ ul {
 .do {
   padding-top: 0px;
 }
+.do-photo {
+  display: block;
+}
 .do-list {
   display: flex;
   justify-content: space-between;
@@ -353,7 +341,6 @@ ul {
 
   width: 100%;
   min-height: 70px;
- 
 }
 
 /* Наша команда */
@@ -408,7 +395,6 @@ ul {
 .icon-link {
   width: 44px;
   height: 44px;
-  fill: #afb1b8;
   background-color: var(--main-color);
 
   display: flex;
@@ -416,16 +402,22 @@ ul {
   justify-content: center;
   align-items: center;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fil 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.photo-link {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .photo-link {
   width: 20px;
   height: 20px;
+
+  fill: #afb1b8;
 }
 .icon-link:hover,
 .icon-link:focus {
   background-color: var(--accent-color);
+}
+.icon-link:hover .photo-link {
   fill: var(--main-color);
 }
 /* Постоянные клиенты */
@@ -446,8 +438,16 @@ ul {
 .clients-link:focus .company-accent {
   fill: var(--accent-color);
 }
-.clients-lonk .company-accent {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.company-accent {
+  fill: #afb1b8;
+}
+.clients-link {
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.company-accent {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
@@ -462,8 +462,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Footer */
 .page-footer {
@@ -479,6 +477,10 @@ ul {
 .address {
   color: var(--main-color);
   font-weight: 400;
+}
+.address,
+.footer-contact {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contact {
   color: rgba(255, 255, 255, 0.6);
@@ -555,10 +557,16 @@ ul {
   display: inline-block;
   padding: 6px 22px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .btn:hover,
 .btn:focus {
+  color: var(--main-color);
+  background-color: var(--accent-color);
+  border-style: none;
+  border-radius: 4px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -593,7 +601,8 @@ ul {
 }
 .work-item {
   width: 370px;
-
+}
+.work-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .work-item:not(:nth-child(3n)) {
