@@ -388,6 +388,13 @@ ul {
   margin-bottom: 16px;
 }
 /* Ссылки на соц сети */
+.photo-link {
+  width: 20px;
+  height: 20px;
+
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .icon {
   display: flex;
   justify-content: space-between;
@@ -402,22 +409,9 @@ ul {
   justify-content: center;
   align-items: center;
 
-  transition: background-color 5000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 5000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-.icon-link .photo-link{
-  transition-property: fill ;
-  transition-duration: 5000ms;
-  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
-.photo-link {
-  width: 20px;
-  height: 20px;
-
-  fill: #afb1b8;
-}
-
 .icon-link:hover,
 .icon-link:focus {
   background-color: var(--accent-color);
@@ -425,6 +419,7 @@ ul {
 .icon-link:hover .photo-link {
   fill: var(--main-color);
 }
+
 /* Постоянные клиенты */
 
 .clients-title {
@@ -439,8 +434,8 @@ ul {
   display: flex;
   justify-content: space-between;
 }
-.clients-link .company-accent{
-  transition: fill 5000ms cubic-bezier(0.4, 0, 0.2, 1);
+.clients-link .company-accent {
+  transition: all 5000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .company-accent,
@@ -449,10 +444,12 @@ ul {
 }
 .company-accent {
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link {
-  transition: border-color 5000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -548,7 +545,7 @@ ul {
 }
 
 /* PORTFOLIO.HTML */
-.btn {
+ .btn {
   border-radius: 4px;
   background-color: var(--button-color);
   color: var(--main-text-color);
@@ -654,4 +651,4 @@ ul {
 }
 .work-item:hover .product-text {
   transform: translateY(0%);
-}
+} 
